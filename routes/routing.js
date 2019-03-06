@@ -1,8 +1,8 @@
 var express = require ('express')
 var app = express()
 
-app.post('/', function(req, res){
-    res.send('POST request to the home page');
+app.get('/', function(req, res){
+    res.send('error');
 })
 
 module.exports = app
