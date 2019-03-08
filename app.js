@@ -10,6 +10,8 @@ var routingRouter = require('./routes/routing');
 
 var app = express();
 
+app.disable('etag');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
