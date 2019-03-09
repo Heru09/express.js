@@ -1,7 +1,85 @@
 extends layout
 block style
+    link(rel='stylesheet', type='text/css', href='styles/product_styles.css')
+    link(rel='stylesheet', type='text/css', href='styles/product_responsive.css')
 
 block content
-    h1 Detail Barang
+    .super_container
+      // Single Product
+      .single_product
+        .container
+          .row
+            // Images
+            .col-lg-2.order-lg-1.order-2
+              ul.image_list
+                li(data-image='images/single_4.jpg')
+                  img(src='images/single_4.jpg', alt='')
+                li(data-image='images/single_2.jpg')
+                  img(src='images/single_2.jpg', alt='')
+                li(data-image='images/single_3.jpg')
+                  img(src='images/single_3.jpg', alt='')
+            // Selected Image
+            .col-lg-5.order-lg-2.order-1
+              .image_selected
+                img(src='images/single_4.jpg', alt='')
+            // Description
+            .col-lg-5.order-3
+              .product_description
+                .product_category Laptops
+                .product_name MacBook Air 13
+                .rating_r.rating_r_4.product_rating
+                  i
+                  i
+                  i
+                  i
+                  i
+                .product_text
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum. laoreet turpis, nec sollicitudin dolor cursus at. Maecenas aliquet, dolor a faucibus efficitur, nisi tellus cursus urna, eget dictum lacus turpis.
+                .order_info.d-flex.flex-row
+                  form(action='#')
+                    .clearfix(style='z-index: 1000;')
+                      // Product Quantity
+                      .product_quantity.clearfix
+                        span Quantity: 
+                        input#quantity_input(type='text', pattern='[0-9]*', value='1')
+                        .quantity_buttons
+                          #quantity_inc_button.quantity_inc.quantity_control
+                            i.fas.fa-chevron-up
+                          #quantity_dec_button.quantity_dec.quantity_control
+                            i.fas.fa-chevron-down
+                      // Product Color
+                      ul.product_color
+                        li
+                          span Color: 
+                          .color_mark_container
+                            #selected_color.color_mark
+                          .color_dropdown_button
+                            i.fas.fa-chevron-down
+                          ul.color_list
+                            li
+                              .color_mark(style='background: #999999;')
+                            li
+                              .color_mark(style='background: #b19c83;')
+                            li
+                              .color_mark(style='background: #000000;')
+                    .product_price $2000
+                    .button_container
+                      button.button.cart_button(type='button') Add to Cart
+                      .product_fav
+                        i.fas.fa-heart
 
 block script
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='styles/bootstrap4/popper.js')
+    script(src='styles/bootstrap4/bootstrap.min.js')
+    script(src='plugins/greensock/TweenMax.min.js')
+    script(src='plugins/greensock/TimelineMax.min.js')
+    script(src='plugins/scrollmagic/ScrollMagic.min.js')
+    script(src='plugins/greensock/animation.gsap.min.js')
+    script(src='plugins/greensock/ScrollToPlugin.min.js')
+    script(src='plugins/OwlCarousel2-2.2.1/owl.carousel.js')
+    script(src='plugins/slick-1.8.0/slick.js')
+    script(src='plugins/easing/easing.js')
+    script(src='js/custom.js')
+    script(src='js/product_custom.js')
