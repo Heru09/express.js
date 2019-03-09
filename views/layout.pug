@@ -6,6 +6,10 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description', content='OneTech shop project')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    //tambahkan style ke halaman berikutnya
+    block style
+
     link(rel='stylesheet', type='text/css', href='styles/bootstrap4/bootstrap.min.css')
     link(href='plugins/fontawesome-free-5.0.1/css/fontawesome-all.css', rel='stylesheet', type='text/css')
     link(rel='stylesheet', type='text/css', href='plugins/OwlCarousel2-2.2.1/owl.carousel.css')
@@ -14,6 +18,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='plugins/slick-1.8.0/slick.css')
     link(rel='stylesheet', type='text/css', href='styles/main_styles.css')
     link(rel='stylesheet', type='text/css', href='styles/responsive.css')
+
+
   body
 
     .super_container
@@ -27,11 +33,11 @@ html(lang='en')
                 .top_bar_contact_item
                   .top_bar_icon
                     img(src='images/phone.png', alt='')
-                  | +38 068 005 3570
+                  | 085-238-138-038
                 .top_bar_contact_item
                   .top_bar_icon
                     img(src='images/mail.png', alt='')
-                  a(href='mailto:fastsales@gmail.com') fastsales@gmail.com
+                  a(href='mailto:fastsales@gmail.com') onlinestorebengkuluselatan@gmail.com
                 .top_bar_content.ml-auto
                   .top_bar_user
                     .user_icon
@@ -48,7 +54,7 @@ html(lang='en')
               .col-lg-2.col-sm-3.col-3.order-1
                 .logo_container
                   .logo
-                    a(href='#') OneTech
+                    a(href='#') OS BS
               // Search
               .col-lg-6.col-12.order-lg-2.order-3.text-lg-left.text-right
                 .header_search
@@ -106,11 +112,11 @@ html(lang='en')
                   .main_nav_menu.ml-auto
                     ul.standard_dropdown.main_nav_dropdown
                       li
-                        a(href='#')
+                        a(href='http://localhost:3000')
                           | Home
                           i.fas.fa-chevron-down
                       li
-                        a(href='contact.html')
+                        a(href='contact')
                           | Contact
                           i.fas.fa-chevron-down
                   // Menu Trigger
@@ -133,8 +139,12 @@ html(lang='en')
                       input.page_menu_search_input(type='search', required='required', placeholder='Search for products...')
                   ul.page_menu_nav
                     li.page_menu_item
-                      a(href='#')
+                      a(href='http://localhost:3000/')
                         | Home
+                        i.fa.fa-angle-down
+                    li.page_menu_item
+                      a(href='contact')
+                        | Contact
                         i.fa.fa-angle-down
                     li.page_menu_item
                       a(href='register.html')
@@ -148,11 +158,11 @@ html(lang='en')
                     .menu_contact_item
                       .menu_contact_icon
                         img(src='images/phone_white.png', alt='')
-                      | +38 068 005 3570
+                      | 085-238-138-038
                     .menu_contact_item
                       .menu_contact_icon
                         img(src='images/mail_white.png', alt='')
-                      a(href='mailto:fastsales@gmail.com') fastsales@gmail.com
+                      a(href='mailto:fastsales@gmail.com') onlinestorebengkuluselatan@gmail.com
 
       //content	
       block content
@@ -268,6 +278,8 @@ html(lang='en')
                       a(href='#')
                         img(src='images/logos_4.png', alt='')
    
+    //tambahan sript ke halaman berikutnya
+    block script
     script(src='js/jquery-3.3.1.min.js')
     script(src='styles/bootstrap4/popper.js')
     script(src='styles/bootstrap4/bootstrap.min.js')
