@@ -40,13 +40,13 @@ block content
                       img.image(src='/#{showedhandphone.image1}', alt='')
                     .viewed_content.text-center
                       .viewed_price
-                        | #{showedhandphone.harga}
-                        span IDR 300 
+                        | #{showedhandphone.hargabaru}
+                        span #{showedhandphone.hargalama}
                       .viewed_name
                         a(href='/detailbarang') #{showedhandphone.merk}
                     ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new habis
+                      li.item_mark.item_discount #{showedhandphone.stok}
+                      //li.item_mark.item_new habis
                 
     // Brands
     .brands
