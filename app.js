@@ -3,16 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//const exphbs = require('express-handlebars');
+// var handphone = require('./models/handphone.json');
+// console.log(handphone);
+
 
 var indexRouter = require('./routes/index');
 var contactRouter = require('./routes/contact');
 var detailbarangRouter = require('./routes/detailbarang');
-//var handphone = require('./models/handphone.json');
-//console.log(handphone);
+
 
 var app = express();
 
 // view engine setup
+// app.engine('.pug', exphbs({
+//   defaultLayout: 'main',
+//   extname: '.pug',
+//   layoutsDir: path.join(__dirname, 'views')
+// }));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 

@@ -34,80 +34,20 @@ block content
               .owl-carousel.owl-theme.viewed_slider
                 // Recently Viewed Item
                 .owl-item
+                each showedhandphone in showhandphone
                   .viewed_item.discount.d-flex.flex-column.align-items-center.justify-content-center.text-center
                     .viewed_image
-                      img(src='images/BeoplayH7_det1.jpg', alt='')
+                      img.image(src='/#{showedhandphone.image1}', alt='')
                     .viewed_content.text-center
                       .viewed_price
-                        | IDR 300
-                        span IDR 300
+                        | #{showedhandphone.harga}
+                        span IDR 300 
                       .viewed_name
-                        a(href='/detailbarang') Beoplay H7
+                        a(href='/detailbarang') #{showedhandphone.merk}
                     ul.item_marks
                       li.item_mark.item_discount -25%
                       li.item_mark.item_new habis
-                // Recently Viewed Item
-                .owl-item
-                  .viewed_item.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    .viewed_image
-                      img(src='images/LUNA Smartphone_det3.jpg', alt='')
-                    .viewed_content.text-center
-                      .viewed_price $379
-                      .viewed_name
-                        a(href='#') LUNA Smartphone
-                    ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new ada
-                // Recently Viewed Item
-                .owl-item
-                  .viewed_item.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    .viewed_image
-                      img(src='images/view_3.jpg', alt='')
-                    .viewed_content.text-center
-                      .viewed_price $225
-                      .viewed_name
-                        a(href='#') Samsung J730F...
-                    ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new ada
-                // Recently Viewed Item
-                .owl-item
-                  .viewed_item.is_new.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    .viewed_image
-                      img(src='images/view_4.jpg', alt='')
-                    .viewed_content.text-center
-                      .viewed_price $379
-                      .viewed_name
-                        a(href='#') Huawei MediaPad...
-                    ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new habis
-                // Recently Viewed Item
-                .owl-item
-                  .viewed_item.discount.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    .viewed_image
-                      img(src='images/view_5.jpg', alt='')
-                    .viewed_content.text-center
-                      .viewed_price
-                        | $225
-                        span $300
-                      .viewed_name
-                        a(href='#') Sony PS4 Slim
-                    ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new ada
-                // Recently Viewed Item
-                .owl-item
-                  .viewed_item.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    .viewed_image
-                      img(src='images/view_6.jpg', alt='')
-                    .viewed_content.text-center
-                      .viewed_price $375
-                      .viewed_name
-                        a(href='#') Speedlink...
-                    ul.item_marks
-                      li.item_mark.item_discount -25%
-                      li.item_mark.item_new ada
+                
     // Brands
     .brands
       .container
