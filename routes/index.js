@@ -6,8 +6,8 @@ const fs = require('fs');
 router.get('/', function(req, res, next) {
    fs.readFile('./models/handphone.json', (err, data) => {
     let handphone = JSON.parse(data);
-    console.log(handphone);
-    res.render('index', {showhandphone: handphone});
+    console.log(handphone.image1);
+    res.render('index', {showhandphone: handphone, formhandphone:"Handphone"});
    });
 });
 

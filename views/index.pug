@@ -13,7 +13,8 @@ block content
               h1.banner_text new era of smartphones
               .banner_price
                 span $530
-                | $460
+                | $460 
+                
               .banner_product_name Apple Iphone 6s
               .button.banner_button
                 a(href='#') Shop Now
@@ -23,7 +24,8 @@ block content
         .row
           .col
             .viewed_title_container
-              h3.viewed_title HandPhone
+              //h3.viewed_title HandPhone:
+              h3= formhandphone
               .viewed_nav_container
                 .viewed_nav.viewed_prev
                   i.fas.fa-chevron-left
@@ -37,7 +39,7 @@ block content
                 each showedhandphone in showhandphone
                   .viewed_item.discount.d-flex.flex-column.align-items-center.justify-content-center.text-center
                     .viewed_image
-                      img.image(src='/#{showedhandphone.image1}', alt='')
+                      img.image(src='/', alt='')
                     .viewed_content.text-center
                       .viewed_price
                         | #{showedhandphone.hargabaru}
